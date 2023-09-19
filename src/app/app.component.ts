@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'mar-front-2023';
+  nombre = "Ali"
+  counter = 0
+
+
 }
