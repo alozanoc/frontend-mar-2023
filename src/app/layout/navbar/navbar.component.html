@@ -14,9 +14,10 @@
         <div class="flex items-center flex-col w-full">
           <img src="https://i.pravatar.cc/100?img=3" alt="" class="rounded-full w-10">
         </div>
-        <div>Ali Lozano</div>
+        <div>{{ fullName }}</div>
       </div>
-      <button mat-menu-item>Cerrar Sesión</button>
+      <button mat-menu-item *ngIf="!authenticationService.isAuthenticated()" routerLink="/login">Iniciar Sesión</button>
+      <button mat-menu-item *ngIf="authenticationService.isAuthenticated()" (click)="logout()">Cerrar Sesión</button>
     </mat-menu>
   </div>
 </div>
