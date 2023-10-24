@@ -7,6 +7,7 @@ import { RouterOutlet } from '@angular/router';
 import { IntranetRoutingModule } from './intranet-routing.module';
 import { OpenTablesComponent } from './open-tables/open-tables.component';
 import { FormsModule } from '@angular/forms';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     LayoutModule,
     RouterOutlet,
     IntranetRoutingModule,
-    FormsModule
+    FormsModule,
+    MatSidenavModule
   ]
 })
 export class IntranetModule { }

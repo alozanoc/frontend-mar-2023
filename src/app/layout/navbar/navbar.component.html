@@ -1,7 +1,22 @@
-<div class="bg-gray-900 text-white flex flex-row">
+<div class="bg-gray-900 text-white flex flex-row p-2">
+  <button (click)="layoutService.toggleSidebar()">
+    <mat-icon>menu</mat-icon>
+  </button>
   <div class="flex-grow" routerLink="/">Logo</div>
   <div class="gap-2 flex flex-row">
     <a class="p-2 flex" routerLink="/intranet/">Home</a>
     <a class="p-2 flex" routerLink="/intranet/open-tables">Open Tables</a>
+    <button mat-button [matMenuTriggerFor]="menu">
+      <img src="https://i.pravatar.cc/100?img=3" alt="" class="rounded-full w-10">
+    </button>
+    <mat-menu #menu="matMenu">
+      <div class="text-center text-gray-600 flex flex-col gap-2">
+        <div class="flex items-center flex-col w-full">
+          <img src="https://i.pravatar.cc/100?img=3" alt="" class="rounded-full w-10">
+        </div>
+        <div>Ali Lozano</div>
+      </div>
+      <button mat-menu-item>Cerrar Sesión</button>
+    </mat-menu>
   </div>
 </div>
